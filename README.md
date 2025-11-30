@@ -177,17 +177,18 @@ deactivate
 ## Project Structure
 
 ```
-Voice-Chat-Bot/
+AI_Voice-Chat-Bot/
 ├── .env                     # Environment variables (API keys)
-├── Chat_Bot.py              # Chat bot implementation
-├── llm.py                   # Language model integration
-├── Voice_Bot.py             # Main voice bot application
-├── README.md                # This documentation
+├── Chat_Bot.py              # Text-based chat bot with conversation memory
+├── llm.py                   # Language model integration (batch & streaming modes)
+├── VoiceAgent.py            # Voice bot application with real-time conversation
+├── README.md                # Project documentation
 ├── requirements.txt         # Python dependencies
-├── speech_to_text.py        # Speech-to-text streaming functionality
-├── Bot_prompt.txt           # System prompt configuration
-├── text_to_speech.py        # Text-to-speech functionality
-└── myenv/                   # Virtual environment folder (created during setup)
+├── speech_to_text.py        # Real-time speech-to-text streaming
+├── system_prompt.txt        # System prompt configuration for VoiceAgent
+├── text_to_speech.py        # Text-to-speech conversion
+├── Bot_prompt.txt           # Bot personality prompt (assistant named Prathikha)
+└── myenv/                   # Virtual environment folder
 ```
 
 ## Contributing
