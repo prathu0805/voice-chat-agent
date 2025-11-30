@@ -1,6 +1,26 @@
-# Voice Bot Project
+<h1 align="center">Real-time AI ChatBot and voice-enabled AI VoiceBot</h1>
+<br>
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
+  <img src="https://img.shields.io/badge/langchain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain">
+  <img src="https://img.shields.io/badge/groq-FF6600?style=for-the-badge&logo=groq&logoColor=white" alt="Groq">
+  <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI">
+  <img src="https://img.shields.io/badge/deepgram-13EF93?style=for-the-badge&logo=deepgram&logoColor=black" alt="Deepgram">
+</p>
+<br>
 
-A voice-enabled AI chatbot that uses Deepgram for speech-to-text conversion and Groq for natural language processing.
+
+🔊 Real-Time Voice AI Assistant using Groq LLaMA3 + Deepgram + LangChain .
+
+This project is a real-time voice-based conversational AI assistant that integrates:
+
+   🧠 Groq’s LLaMA3 (via LangChain) for ultra-fast, high-quality conversational intelligence
+   
+   🎙️ Deepgram STT (Speech-to-Text) for real-time transcription from microphone input
+   
+   🗣️ Deepgram TTS (Text-to-Speech) for fast and natural voice responses using ffplay
+   
+Core components such as LLM (Large Language Model), STT (Speech to Text Model), TTS (Text to Speech Model), and the overall Chatbot architecture have also been documented to support comprehensive understanding and customization.
 
 ## Features
 
@@ -8,40 +28,6 @@ A voice-enabled AI chatbot that uses Deepgram for speech-to-text conversion and 
 - AI-powered responses via Groq LLM
 - Easy setup with virtual environment
 - Cross-platform compatibility
-
-## Prerequisites
-
-- Python 3.7 or higher
-- Visual Studio Code (recommended)
-- Internet connection for API services
-- FFmpeg (required for audio processing)
-
-## API Setup
-
-### 1. Groq API Key
-
-1. Visit [Groq Console](https://console.groq.com/keys)
-2. Create an account or sign in
-3. Generate a new API key
-4. Copy the API key for later use
-
-### 2. Deepgram API Key
-
-1. Visit [Deepgram Console](https://console.deepgram.com/project/39cce778-24bb-4b9d-bb81-43ae477695a5/keys)
-2. Create an account or sign in
-3. Generate a new API key
-4. Copy the API key for later use
-
-### 3. Environment Configuration
-
-Create a `.env` file in the project root directory and add your API keys (replace if already exists):
-
-```env
-GROQ_API_KEY=your_groq_api_key_here
-DEEPGRAM_API_KEY=your_deepgram_api_key_here
-```
-
-**Important:** Replace `your_groq_api_key_here` and `your_deepgram_api_key_here` with your actual API keys.
 
 ## Installation
 
@@ -56,11 +42,11 @@ DEEPGRAM_API_KEY=your_deepgram_api_key_here
    ```
 4. Clone the repository:
    ```bash
-   git clone https://github.com/Sharan-Kumar-R/voice-chat-agent.git
+   git clone https://github.com/Sharan-Kumar-R/Voice-Chat-Bot.git
    ```
 5. Open the project folder:
    ```bash
-   cd voice-chat-agent
+   cd Voice-Chat-Bot
    ```
 6. Open the project in VS Code:
    ```bash
@@ -71,7 +57,7 @@ DEEPGRAM_API_KEY=your_deepgram_api_key_here
 1. Open Visual Studio Code
 2. Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac)
 3. Type "Git: Clone" and select it
-4. Paste the repository URL: `https://github.com/Sharan-Kumar-R/voice-chat-agent.git`
+4. Paste the repository URL: `https://github.com/Sharan-Kumar-R/Voice-Chat-Bot.git`
 5. Choose a folder location and click "Select Repository Location"
 6. Click "Open" when prompted
 
@@ -82,7 +68,7 @@ DEEPGRAM_API_KEY=your_deepgram_api_key_here
 3. Follow the installation instructions for your platform
 4. Verify the installation by opening a terminal/command prompt and typing:
    ```bash
-   ffmpeg --version
+   ffmpeg -version
    ```
    If FFmpeg is properly installed, you should see version information displayed.
 
@@ -94,7 +80,7 @@ Open a terminal in Visual Studio Code and run:
 python -m venv myenv
 ```
 
-### Step 3: Activate Virtual Environment
+### Step 4: Activate Virtual Environment
 
 **For Windows:**
 ```bash
@@ -111,11 +97,37 @@ After activation, you should see something like this in your terminal:
 (myenv) PS C:\Users\username\path\to\project>
 ```
 
-### Step 4: Install Dependencies
+### Step 5: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
+## API Setup
+
+### 1. Groq API Key
+
+1. Visit [Groq Console](https://groq.com/)
+2. Create an account or sign in
+3. Generate a new API key
+4. Copy the API key for later use
+
+### 2. Deepgram API Key
+
+1. Visit [Deepgram Console](https://deepgram.com/)
+2. Create an account or sign in
+3. Generate a new API key
+4. Copy the API key for later use
+
+### 3. Environment Configuration
+
+Update the `.env` file in the project root directory and add your API keys (replace if already exists):
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+DEEPGRAM_API_KEY=your_deepgram_api_key_here
+```
+
+**Important:** Replace `your_groq_api_key_here` and `your_deepgram_api_key_here` with your actual API keys.
 
 ## Usage
 
@@ -128,12 +140,16 @@ pip install -r requirements.txt
 
 2. Run the main voice bot application:
    ```bash
-   python QuickAgent.py
+   python Voice_Bot.py
    ```
+3. **Start talking!** The bot will:
+   - Listen to your voice input
+   - Process it through Groq LLaMA3
+   - Respond with natural speech
 
 ### Customizing the Bot
 
-To customize the bot's behavior, such as naming the model and defining its function, edit the `system_prompt.txt` file or modify the `system_prompt` variable in the code.
+To customize the bot's behavior, such as naming the model and defining its function, edit the `Bot_prompt.txt` file.
 
 ### Running Other Scripts
 
@@ -161,15 +177,29 @@ deactivate
 ## Project Structure
 
 ```
-voice-bot-project/
+Voice-Chat-Bot/
 ├── .env                     # Environment variables (API keys)
 ├── Chat_Bot.py              # Chat bot implementation
 ├── llm.py                   # Language model integration
-├── QuickAgent.py            # Main voice bot application
+├── Voice_Bot.py             # Main voice bot application
 ├── README.md                # This documentation
 ├── requirements.txt         # Python dependencies
 ├── speech_to_text.py        # Speech-to-text streaming functionality
-├── system_prompt.txt        # System prompt configuration
+├── Bot_prompt.txt           # System prompt configuration
 ├── text_to_speech.py        # Text-to-speech functionality
 └── myenv/                   # Virtual environment folder (created during setup)
 ```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+In case of any queries, please leave a message or contact me via the email provided in my profile.
+
+<p align="center">
+⭐ <strong>Star this repository if you found it helpful!</strong>
+</p>
